@@ -31,6 +31,8 @@ namespace AppSoutenance.Models
 
         public DbSet<Professeur> professeurs { get; set; }
 
+        public DbSet<Departement> departements { get; set; }
+
 
 
 

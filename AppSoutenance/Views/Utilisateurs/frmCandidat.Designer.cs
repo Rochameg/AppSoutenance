@@ -1,6 +1,6 @@
-namespace AppSoutenance.Views.Parametre
+namespace AppSoutenance.Views.Utilisateurs
 {
-    partial class frmProfesseur
+    partial class frmCandidat
     {
         private System.ComponentModel.IContainer components = null;
         protected override void Dispose(bool disposing)
@@ -18,8 +18,6 @@ namespace AppSoutenance.Views.Parametre
             btnAdd = new Button();
             txtPassword = new TextBox();
             lblPassword = new Label();
-            txtSpecialite = new TextBox();
-            lblSpecialite = new Label();
             txtTel = new TextBox();
             lblTel = new Label();
             txtEmail = new TextBox();
@@ -28,13 +26,14 @@ namespace AppSoutenance.Views.Parametre
             lblPrenom = new Label();
             txtNom = new TextBox();
             lblNom = new Label();
+            txtMatricule = new TextBox();
+            lblMatricule = new Label();
             lblTitle = new Label();
-            dgvProfesseur = new DataGridView();
+            dgvCandidat = new DataGridView();
             pnlForm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvProfesseur).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCandidat).BeginInit();
             SuspendLayout();
 
-            // pnlForm
             pnlForm.BackColor = Color.White;
             pnlForm.Controls.Add(btnClear);
             pnlForm.Controls.Add(btnDelete);
@@ -42,8 +41,6 @@ namespace AppSoutenance.Views.Parametre
             pnlForm.Controls.Add(btnAdd);
             pnlForm.Controls.Add(txtPassword);
             pnlForm.Controls.Add(lblPassword);
-            pnlForm.Controls.Add(txtSpecialite);
-            pnlForm.Controls.Add(lblSpecialite);
             pnlForm.Controls.Add(txtTel);
             pnlForm.Controls.Add(lblTel);
             pnlForm.Controls.Add(txtEmail);
@@ -52,121 +49,97 @@ namespace AppSoutenance.Views.Parametre
             pnlForm.Controls.Add(lblPrenom);
             pnlForm.Controls.Add(txtNom);
             pnlForm.Controls.Add(lblNom);
+            pnlForm.Controls.Add(txtMatricule);
+            pnlForm.Controls.Add(lblMatricule);
             pnlForm.Controls.Add(lblTitle);
             pnlForm.Dock = DockStyle.Left;
-            pnlForm.Location = new Point(0, 0);
-            pnlForm.Padding = new Padding(20);
             pnlForm.Size = new Size(350, 600);
 
-            // lblTitle
             lblTitle.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             lblTitle.ForeColor = Color.FromArgb(30, 58, 95);
             lblTitle.Location = new Point(20, 20);
             lblTitle.Size = new Size(310, 35);
-            lblTitle.Text = "Gestion des Professeurs";
+            lblTitle.Text = "Gestion des Candidats";
 
-            // lblNom
-            lblNom.Location = new Point(20, 70);
+            lblMatricule.Location = new Point(20, 70);
+            lblMatricule.Size = new Size(100, 20);
+            lblMatricule.Text = "Matricule";
+            txtMatricule.Location = new Point(20, 93);
+            txtMatricule.Size = new Size(310, 27);
+
+            lblNom.Location = new Point(20, 125);
             lblNom.Size = new Size(100, 20);
             lblNom.Text = "Nom";
-
-            // txtNom
-            txtNom.Location = new Point(20, 93);
+            txtNom.Location = new Point(20, 148);
             txtNom.Size = new Size(310, 27);
 
-            // lblPrenom
-            lblPrenom.Location = new Point(20, 125);
+            lblPrenom.Location = new Point(20, 180);
             lblPrenom.Size = new Size(100, 20);
             lblPrenom.Text = "Prénom";
-
-            // txtPrenom
-            txtPrenom.Location = new Point(20, 148);
+            txtPrenom.Location = new Point(20, 203);
             txtPrenom.Size = new Size(310, 27);
 
-            // lblEmail
-            lblEmail.Location = new Point(20, 180);
+            lblEmail.Location = new Point(20, 235);
             lblEmail.Size = new Size(100, 20);
             lblEmail.Text = "Email";
-
-            // txtEmail
-            txtEmail.Location = new Point(20, 203);
+            txtEmail.Location = new Point(20, 258);
             txtEmail.Size = new Size(310, 27);
 
-            // lblTel
-            lblTel.Location = new Point(20, 235);
+            lblTel.Location = new Point(20, 290);
             lblTel.Size = new Size(100, 20);
             lblTel.Text = "Téléphone";
-
-            // txtTel
-            txtTel.Location = new Point(20, 258);
+            txtTel.Location = new Point(20, 313);
             txtTel.Size = new Size(310, 27);
 
-            // lblSpecialite
-            lblSpecialite.Location = new Point(20, 290);
-            lblSpecialite.Size = new Size(100, 20);
-            lblSpecialite.Text = "Spécialité";
-
-            // txtSpecialite
-            txtSpecialite.Location = new Point(20, 313);
-            txtSpecialite.Size = new Size(310, 27);
-
-            // lblPassword
             lblPassword.Location = new Point(20, 345);
             lblPassword.Size = new Size(150, 20);
             lblPassword.Text = "Mot de passe";
-
-            // txtPassword
             txtPassword.Location = new Point(20, 368);
             txtPassword.Size = new Size(310, 27);
             txtPassword.UseSystemPasswordChar = true;
 
-            // btnAdd
             btnAdd.Location = new Point(20, 420);
             btnAdd.Size = new Size(150, 40);
             btnAdd.Text = "Ajouter";
             btnAdd.Click += btnAdd_Click;
 
-            // btnEdit
             btnEdit.Location = new Point(180, 420);
             btnEdit.Size = new Size(150, 40);
             btnEdit.Text = "Modifier";
             btnEdit.Click += btnEdit_Click;
 
-            // btnDelete
             btnDelete.Location = new Point(20, 470);
             btnDelete.Size = new Size(150, 40);
             btnDelete.Text = "Supprimer";
             btnDelete.Click += btnDelete_Click;
 
-            // btnClear
             btnClear.Location = new Point(180, 470);
             btnClear.Size = new Size(150, 40);
             btnClear.Text = "Effacer";
             btnClear.Click += btnClear_Click;
 
-            // dgvProfesseur
-            dgvProfesseur.Dock = DockStyle.Fill;
-            dgvProfesseur.Location = new Point(350, 0);
-            dgvProfesseur.CellClick += dgvProfesseur_CellClick;
+            dgvCandidat.Dock = DockStyle.Fill;
+            dgvCandidat.CellClick += dgvCandidat_CellClick;
 
-            // frmProfesseur
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(245, 247, 250);
             ClientSize = new Size(1000, 600);
-            Controls.Add(dgvProfesseur);
+            Controls.Add(dgvCandidat);
             Controls.Add(pnlForm);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "frmProfesseur";
-            Load += frmProfesseur_Load;
+            Name = "frmCandidat";
+            Load += frmCandidat_Load;
             pnlForm.ResumeLayout(false);
             pnlForm.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvProfesseur).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCandidat).EndInit();
             ResumeLayout(false);
         }
 
         private Panel pnlForm;
         private Label lblTitle;
+        private Label lblMatricule;
+        private TextBox txtMatricule;
         private Label lblNom;
         private TextBox txtNom;
         private Label lblPrenom;
@@ -175,14 +148,12 @@ namespace AppSoutenance.Views.Parametre
         private TextBox txtEmail;
         private Label lblTel;
         private TextBox txtTel;
-        private Label lblSpecialite;
-        private TextBox txtSpecialite;
         private Label lblPassword;
         private TextBox txtPassword;
         private Button btnAdd;
         private Button btnEdit;
         private Button btnDelete;
         private Button btnClear;
-        private DataGridView dgvProfesseur;
+        private DataGridView dgvCandidat;
     }
 }
